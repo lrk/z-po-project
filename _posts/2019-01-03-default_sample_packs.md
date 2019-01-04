@@ -3,6 +3,8 @@ layout: post
 title: "OP-Z sound engines and sample packs, a first dive into the Z upside-down world"
 ---
 
+OP-Z sound engines and sample packs, a first dive into the Z upside-down world
+
 #Disclaimer
 
 I write this article for educational purposes as I like to learn and explore possibilities of devices that I purchase, that's all.
