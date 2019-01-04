@@ -5,7 +5,7 @@ title: "OP-Z sound engines and sample packs, a first dive into the Z upside-down
 
 OP-Z sound engines and sample packs, a first dive into the Z upside-down world
 
-#Disclaimer
+# Disclaimer
 
 I write this article for educational purposes as I like to learn and explore possibilities of devices that I purchase, that's all.
 
@@ -17,7 +17,7 @@ You will learn a lot of thing about the device you bougth.
 **I will not be responsible if you harm of broke your device / computer / cat or dog.**
 
 
-#A brief summary
+# A brief summary
 
 With Teenage Engineering's latest instrument, OP-Z, comes default sound engines and sample packs.
 You can choose to use the default ones or to use your own. Create them with available community tools, then with OP-Z disk mode, upload them in a free available slot in instrument track's folder.
@@ -37,7 +37,7 @@ Available instrument track's folders:
 Each folder has 10 subfolders matching the 10 plug slots named from `01` to `10`.
 
 
-#A word about the OP-Z filesystem and filenames
+# A word about the OP-Z filesystem and filenames
 
 Open your OP-Z in disk mode, go to the `samplepacks` folder and subfolders, you will notice some empty files for the default sounds.
 Wait what, OP-Z can work with empty files ? Where are my default samples ???
@@ -77,7 +77,7 @@ But, what if there is more default samples and sound engines available than thes
 As I can not currently gain access to the embedded filesystem, my sole option is to look at the OP-Z mobile app and dive into it's files.
 
 
-#What have i found
+# What have i found
 
 
 At first glance, the iPhone app will show you some default sound engines and samples in the `Configurator` page.
@@ -127,7 +127,7 @@ Bonus, you can re-upload thoses samples to the OP-Z with a new name, or simply c
 Be careful, not all files will work for all instruments, and I experienced many OP-Z's app and device crash when using some of them.
 
 
-#God dammit ! It crashed !
+# God dammit ! It crashed !
 
 Ok, exploring undocumented features may lead sooner or later to some device crash.
 
@@ -137,7 +137,7 @@ If it append to you, you can try the following steps, provided as-is.
 - reboot the device in upgrade mode and reset it to factory default.
 
 
-#That's all folks
+# That's all folks
 
 That's all for today, there is many many thing i want to try and explore, i'll try to keep up and document what i find.
 Enjoy.
