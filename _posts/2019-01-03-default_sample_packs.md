@@ -77,7 +77,7 @@ But, what if there is more default samples and sound engines available than thes
 As I can not currently gain access to the embedded filesystem, my sole option is to look at the OP-Z mobile app and dive into it's files.
 
 
-# What have i found
+# What I have found
 
 
 At first glance, the iPhone app will show you some default sound engines and samples in the `Configurator` page.
