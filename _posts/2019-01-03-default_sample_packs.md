@@ -82,7 +82,7 @@ As I can not currently gain access to the embedded filesystem, my sole option is
 
 At first glance, the iPhone app will show you some default sound engines and samples in the `Configurator` page.
 
-But if you manage to gan access to the app files, you will discover several things.
+But if you manage to gain access to the app files, you will discover several things.
 
 First, most of the default resources  available in the embedded filesystem (sound engines, samples, config files), are available in the mobile app.
 Second, and it's a win, there is more samples available than these showed in the OP-Z's application !!! It's not much, but it open more possibilities.
