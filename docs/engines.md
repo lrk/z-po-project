@@ -41,7 +41,7 @@ Below, a list of known OP-Z sound engines and plugs.
 **Note:** *not all plugs are assignable by the user, if this is the case, the disk mode filename will be N/A.*
 
 | Plug ID | Engine memory slot | Name (internal) | Sample | Comment | Disk mode filename |
-|:---:|:---:|---|---|:---:|---|---|
+|:---:|:---:|---|---|:---:|---|
 |11|83|cluster|N/A|Cluster synthesizer|~11.engine|
 |25|62|digital (leadDigital)|N/A|Versatile lead synthesizer|~25.engine|
 |26|16|saw|N/A|Versatile lead synthesizer|~26.engine|
