@@ -121,6 +121,10 @@ The step component bitmask indicate which step components are enabled.
 
 The first byte bits are numbered from 8 to 1, the second byte bits from 16 to 09.
 
-| 08 | 07 | 06 | 05 | 04 | 03 | 02 | 01 | 16 | 15 | 14 | 13 | 12 | 11 | 10 | 09 |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Glide | Random | Ramp Down | Ramp Up | Velocity | Jump | Parameter Spark | Pulse | Unused | Unused | Component Spark | Trigger Spark | Tonality | Pulse Hold | Sweep | Multiply |
+| 08 | 07 | 06 | 05 | 04 | 03 | 02 | 01 |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Glide | Random | Ramp Down | Ramp Up | Velocity | Jump | Parameter Spark | Pulse |
+
+| 16 | 15 | 14 | 13 | 12 | 11 | 10 | 09 |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Unused | Unused | Component Spark | Trigger Spark | Tonality | Pulse Hold | Sweep | Multiply |
