@@ -1,28 +1,29 @@
 # OP-Z Project file format
 
-## Foreword
+## Forewords
 
-Project files are available in folder projects when the device is connected in disk mode.
-They are numbered from 01 to 10, corresponding to the project orders.
+Project files are available in "projects" folder when the device is connected in disk mode.
+They are numbered from 01 to 10, corresponding to the projects orders.
 
-The OP-Z run on a Blackfin ADSP-BF703 processor.
-This processor use little-endian memory processing.
+The OP-Z run on a Blackfin ADSP-BF703 processor, this processor use **little-endian** memory processing.
 
-This file seem to be memory mapped so all data longer than 1 byte in length are stored LSB first.
+This file seem to be memory mapped, so all data are stored LSB first.
 
 Example:
+
 `0xFF3F` should be read `0x3FFF`
 
 
+## File format
 
 
 | Offset | Bytes | Type | Name | Description |
 |:------:|:-----:|------|------|-------------|
 | 0 | 4 | ? | File identifier | value meaning unknown, but it's always a byte, followed by 3 0x00 bytes. The first byte value increase with firmware version number from under which the project was created. With firmware 1.1.17 the value is 0x49 |
-| 4 | 480 | UINT[] | First saved chain pattern | List of 32 bytes blocks containing the chained pattern numbers (indexed to 0 ) |
-| 484 | 32 | Array | Current chain pattern | List of 32 bytes containing the chained pattern numbers (indexed to 0 ) |
+| 4 | 480 | UINT[] | saved chained pattern | Array of  32 bytes arrays containing the saved chained patterns |
+| 484 | 32 | UINT[] | Current chain pattern | Array of 32 bytes containing the current chained pattern, each byte represent the pattern number indexed to 0 |
 | 516 | 4 | ? | ? | ? |
-| 520 | 1 | Unsigned integer | Project tempo | Project tempo from 40 to 200 |
+| 520 | 1 | UINT | Project tempo | Project tempo from 40 to 200 |
 | 521 | ? | ?? | ?? | ?? |
 | 565 | 1 | UINT | Swing | Project's Swing level from 0 to 255 |
 | 566 | 1 | UINT | Metronome level | Metronome sound level |
@@ -54,7 +55,7 @@ Notes:
 
 They should have been some pattern specific header or footer.
 
-### Tracks steps ordering.
+### Tracks steps ordering
 
 **Notes:**
 - T mean track with the track number from 1 to 16 : T1 for track 1, T2 for track 2.
