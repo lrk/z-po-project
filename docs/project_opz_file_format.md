@@ -1,5 +1,10 @@
 # OP-Z Project file format
 
+***This is a work in progress***
+
+Feel free to contribute via pull request / issues.
+
+
 ## Forewords
 
 Project files are available in "projects" folder when the device is connected in disk mode.
@@ -32,7 +37,7 @@ Example:
 | 578 | 1 | UINT | Track 1 step length | Track 1 step length from 1 to 10 |
 | 579 | 1 | UINT | Track 1 quantize | Track 1 quantize |
 | 581 | 1 | UINT | Track 1 note duration | Track 1 note duration |
-| 726 | 1 | ? | ? | passe de 3C à 0B lorsqu'on met un step component sur la T1S1 |
+| 726 | 1 | ? | ? | unknown |
 | 764 | 7040  | list | Tracks steps notes | list of per track per steps notes |
 | 7804 | 13822 | list | Tracks steps metadata | list of per track per steps metadata (parameter locks, step components) |
 | 21640 | 1 | UINT | Track 1 glide | Track 1 glide |
@@ -51,7 +56,7 @@ Notes:
 | Offset | Bytes | Type | Name | Description |
 |:------:|:-----:|------|------|-------------|
 | 0 | 7040 | UINT[] | Track steps notes | An array of bytes for tracks steps notes. See below for tracks steps arrangement.|
-| 7041 | 13822 | UINT[] | ?? | ?? |
+| 7041 | 13822 | UINT[] | Track steps metadata | An array of bytes for tracks steps metadatas. |
 
 They should have been some pattern specific header or footer.
 
@@ -61,12 +66,9 @@ They should have been some pattern specific header or footer.
 - T mean track with the track number from 1 to 16 : T1 for track 1, T2 for track 2.
 - S mean step with the step number from 1 to 16: S1 for step 1, S2 for step 2.
 - Each drum track (from track 1 to 4) can have two notes played at the same time.
-- Each Synth track can have four notes played at the same time.
+- Each Synth track can have four notes (up to 8 for the chord track) played at the same time.
 
-| Index | Bytes | Content |
-| T1S1 | T2S1 | T3S1 | T4S1 | ... |
-
-| N1 | N2 | N1 | N2 | N1 |N2 | ...|
+***(WIP)***
 
 ## Track step note chunk
 
@@ -76,9 +78,9 @@ They should have been some pattern specific header or footer.
 
 | Offset | Bytes | Type | Name | Description |
 |:------:|:-----:|------|------|-------------|
-| 0 | 1 | ? | ? | passe de 00 a FF lorsqu'on met la longueur de note a fond, revient à 0 lorsqu'on n'est plus a fond |
+| 0 | 1 | ? | ? | unknown |
 | 1 | 1 | ? | Note length | Note length. Default value is 0x0A. Should be linear interpolated from 0-16 to 0-255.  |
-| 2 | 1 | ? | ? | passe de 00 à 01 lorsqu'on met la longueur de note à fond , revient à 0 lorsqu'on n'est plus a fond |
+| 2 | 1 | ? | ? | unknown |
 | 3 | 1 | ? | ? | Seem to be always 0x00 |
 | 4 | 1 | UINT | Note | Note value, it's 0 based for C1 and increase by one for each semitone. Divide the note by 12 give the octave number |
 | 5 | 1 | UINT | Velocity | Velocity value. Default value is 100 |
@@ -109,7 +111,8 @@ Size: 8 bytes
 | 13 | 1 | UINT | Step component ? parameter | Step component ? parameter value, default value is 0x04 |
 | 14 | 1 | UINT | Step component ? parameter | Step component ? parameter value, default value is 0x02 |
 | 15 | 1 | UINT | Step component ? parameter | Step component ? parameter value, default value is 0x02 |
-...
+| 16 | 38 | ?? | ??? | WIP |
+
 Size: 54 bytes
 
 ### Step components bitmask
@@ -121,27 +124,3 @@ The first byte bits are numbered from 8 to 1, the second byte bits from 16 to 09
 | 08 | 07 | 06 | 05 | 04 | 03 | 02 | 01 | 16 | 15 | 14 | 13 | 12 | 11 | 10 | 09 |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Glide | Random | Ramp Down | Ramp Up | Velocity | Jump | Parameter Spark | Pulse | Unused | Unused | Component Spark | Trigger Spark | Tonality | Pulse Hold | Sweep | Multiply |
-
-## pense bete:
-
-chaque step peut avoir 14 step component (possible bitmask)
-chaque step component peut avoir 1 valeur de 1 à 10
-
-les steps components sont codés bizarrement,l'ordre ne semble pas être respecté
-par contre il n'y a pas de type, ils ont une place bien précise
-
-les steps components qui peuvent avoir une valeur 3 positions (les sparks) sont codés comme suit:
-MSB = type de position:
-0 Trig on value
-1 Trig on 0
-2 Trig on everything else the value
-
-
-Ajouter des notes à une track modifie aussi le byte 583
-
-valeur vide:
-valeur avec step 1 set: 3C
-valeur avec step 1 et 2 set: 48
-avec des notes sur la track 2: le byte 594 passe de 3C à 40
-
-avec des notes sur la track 3 le byte 606 passe de 3C à 35 <- ca doit avoir rapport avec le plug/preset sélectionné comparer ca avec le plugs.json
