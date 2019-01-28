@@ -84,7 +84,7 @@ They should have been some pattern specific header or footer.
 | 3 | 1 | ? | ? | Seem to be always 0x00 |
 | 4 | 1 | UINT | Note | Note value, it's 0 based for C1 and increase by one for each semitone. Divide the note by 12 give the octave number |
 | 5 | 1 | UINT | Velocity | Velocity value. Default value is 100 |
-| 6 | 1 | INT | Micro step adjustment | Micro step adjustment from -23 to 24 |
+| 6 | 1 | INT | Micro step adjustment | Micro step adjustment from -12 to 11 |
 | 7 | 1 | ? | ? | Seem to be always 0x00 |
 
 Size: 8 bytes
