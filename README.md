@@ -1,5 +1,5 @@
 # Z-PO Project
-An attempt to research all information possibles about Teenage Engineering OP-Z
+An attempt to research all informations possible about the Teenage Engineering's OP-Z
 
 See articles at https://lrk.github.io/z-po-project/
 
