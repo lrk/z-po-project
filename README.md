@@ -5,7 +5,7 @@ See articles at https://lrk.github.io/z-po-project/
 
 
 ## Released documentations
-
+- [Hardware details](docs/hardware_details.md)
 - [Sound engines and plugs](docs/engines.md)
 - [Project file format - WIP](docs/project_opz_file_format.md)
 - [User presets file format - WIP](docs/user_presets_file_format.md)
