@@ -14,4 +14,5 @@ See articles at https://lrk.github.io/z-po-project/
 
 ## External resources
 
+- [OP-Z Teardown](http://boulderhackerspace.com/2018/10/31/teenage-engineering-op-z-teardown/)
 - [OP-Z Midi protocol SysEx](https://github.com/hyphz/opzdoc/wiki/MIDI-Protocol)
