@@ -119,15 +119,6 @@ The first byte being tracks from 1 to 8 and the second byte for tracks from 9 to
 
 Size: 32 bytes
 
-### Tracks steps ordering
-
-**Notes:**
-- T mean track with the track number from 1 to 16 : T1 for track 1, T2 for track 2.
-- S mean step with the step number from 1 to 16: S1 for step 1, S2 for step 2.
-- Each drum track (from track 1 to 4) can have two notes played at the same time.
-- Each Synth track can have four notes played at the same time.
-
-
 ## Track chunk
 
 | Offset | Bytes | Type | Name | Description |
@@ -157,6 +148,15 @@ Size: 12 bytes
 | 7 | 1 | UINT8 | Age | Seem to be always 0x00 |
 
 Size: 8 bytes
+
+### Notes ordering
+
+**Notes:**
+- T mean track with the track number from 1 to 16 : T1 for track 1, T2 for track 2.
+- S mean step with the step number from 1 to 16: S1 for step 1, S2 for step 2.
+- Each drum track (from track 1 to 4) can have two notes played at the same time.
+- Each Synth track can have four notes played at the same time.
+
 
 ## Step chunk
 
