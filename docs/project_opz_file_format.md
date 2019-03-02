@@ -58,12 +58,12 @@ Here is a list of known values and related firmware version.
 | Offset | Bytes | Type | Name | Description |
 |:------:|:-----:|------|------|-------------|
 | 0 | 192 | Track[16] | Tracks | Track parameters chunks |
-| 192 | 7040 | Notes[220] | Notes | Notes chunks |
+| 192 | 7040 | Notes[220] | Notes | Notes chunks |
 | 7232 | 13824 | Step[256] | Steps | Steps chunks |
 | 21056 | 288 |  UINT8[288] | Parameters values | parameters values, there is 18 parameters for each 16 tracks |
 | 21344 | 40 | UINT8[40] | Mutes | mute config, tracks are mapped with bitmask |
 | 21384 | 2 | UINT16 | SendTape | Send mapping for Tape track using bitmask|
-| 21386 | 2 | UINT16 | SendMaster | Send mapping for Master track using bitmask |
+| 21386 | 2 | UINT16 | SendMaster | Send mapping for Master track using bitmask |
 | 21388 | 1 | UINT8 | Active mute group | Active mute group |
 | 21389 | 3 | UINT8 | Unused | Unused |
 
