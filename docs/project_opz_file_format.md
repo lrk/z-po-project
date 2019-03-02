@@ -71,7 +71,7 @@ Size: 21392 bytes
 
 ### Track parameters
 
-** Notes **
+**Notes**
 - The order is to be confirmed.
 
 | Offset | Parameter |
