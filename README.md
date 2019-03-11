@@ -1,9 +1,10 @@
 # Z-PO Project
 An attempt to research all informations possible about the Teenage Engineering's OP-Z
 
+[Go to the WIKI to access documents](https://github.com/lrk/z-po-project/wiki)
+
 See articles at https://lrk.github.io/z-po-project/
 
-Documents moved to the [wiki](https://github.com/lrk/z-po-project/wiki)
 
 ## Disclaimer
 
